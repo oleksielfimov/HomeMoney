@@ -7,8 +7,11 @@
   <![endif]-->
   <%= stylesheet_link_tag 'custom', :media => 'screen' %>
   <%= csrf_meta_tags %>
+  <!--[if !IE]><!-->
+  <%= render 'layouts/header' %>
+  <!--<![endif]-->
   </head>
 <body>
-    
+<%= yield %>
 </body>
 </html>

@@ -59,6 +59,9 @@ HomeMoney::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'pages#home'
+  match '/buy', :to => 'pages#buy'
+  match '/account', :to => 'pages#account'
+  match '/report',    :to => 'pages#report'
    
 
   # See how all your routes lay out with "rake routes"
