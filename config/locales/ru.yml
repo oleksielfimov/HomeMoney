@@ -1,257 +1,1146 @@
+# Russian localization for Ruby on Rails 2.2+
+# by Yaroslav Markin <yaroslav@markin.net>
+#
+# Be sure to check out "russian" gem (http://github.com/yaroslav/russian) for
+# full Russian language support in Rails (month names, pluralization, etc).
+# The following is an excerpt from that gem.
+#
+# Для полноценной поддержки русского языка (варианты названий месяцев,
+# плюрализация и так далее) в Rails 2.2 нужно использовать gem "russian"
+# (http://github.com/yaroslav/russian). Следующие данные -- выдержка их него, чтобы
+# была возможность минимальной локализации приложения на русский язык.
+
 ru:
+  direction: ltr
   date:
-    abbr_day_names:
-    - ��
-    - ��
-    - ��
-    - ��
-    - ��
-    - ��
-    - ��
-    abbr_month_names:
-    -
-    - ���.
-    - ����.
-    - �����
-    - ���.
-    - ���
-    - ����
-    - ����
-    - ���.
-    - ����.
-    - ���.
-    - ����.
-    - ���.
-    day_names:
-    - �����������
-    - �����������
-    - �������
-    - �����
-    - �������
-    - �������
-    - �������
     formats:
-      default: ! '%d.%m.%Y'
-      long: ! '%d %B %Y'
-      short: ! '%d %b'
-    month_names:
-    -
-    - ������
-    - �������
-    - �����
-    - ������
-    - ���
-    - ����
-    - ����
-    - �������
-    - ��������
-    - �������
-    - ������
-    - �������
+      default: "%d.%m.%Y"
+      short: "%d %b"
+      long: "%d %B %Y"
+
+    day_names: [воскресенье, понедельник, вторник, среда, четверг, пятница, суббота]
+    standalone_day_names: [Воскресенье, Понедельник, Вторник, Среда, Четверг, Пятница, Суббота]
+    abbr_day_names: [Вс, Пн, Вт, Ср, Чт, Пт, Сб]
+
+    month_names: [~, января, февраля, марта, апреля, мая, июня, июля, августа, сентября, октября, ноября, декабря]
+    # see russian gem for info on "standalone" day names
+    standalone_month_names: [~, Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь]
+    abbr_month_names: [~, янв., февр., марта, апр., мая, июня, июля, авг., сент., окт., нояб., дек.]
+    standalone_abbr_month_names: [~, янв., февр., март, апр., май, июнь, июль, авг., сент., окт., нояб., дек.]
+
     order:
-    - :day
-    - :month
-    - :year
-  datetime:
-    distance_in_words:
-      about_x_hours:
-        few: ����� %{count} �����
-        many: ����� %{count} �����
-        one: ����� %{count} ����
-        other: ����� %{count} ����
-      about_x_months:
-        few: ����� %{count} �������
-        many: ����� %{count} �������
-        one: ����� %{count} ������
-        other: ����� %{count} ������
-      about_x_years:
-        few: ����� %{count} ���
-        many: ����� %{count} ���
-        one: ����� %{count} ����
-        other: ����� %{count} ���
-      almost_x_years:
-        one: ����� 1 ���
-        few: ����� %{count} ����
-        many: ����� %{count} ���
-        other: ����� %{count} ���
-      half_a_minute: ������ ������
-      less_than_x_minutes:
-        few: ������ %{count} �����
-        many: ������ %{count} �����
-        one: ������ %{count} ������
-        other: ������ %{count} ������
-      less_than_x_seconds:
-        few: ������ %{count} ������
-        many: ������ %{count} ������
-        one: ������ %{count} �������
-        other: ������ %{count} �������
-      over_x_years:
-        few: ������ %{count} ���
-        many: ������ %{count} ���
-        one: ������ %{count} ����
-        other: ������ %{count} ���
-      x_days:
-        few: ! '%{count} ���'
-        many: ! '%{count} ����'
-        one: ! '%{count} ����'
-        other: ! '%{count} ���'
-      x_minutes:
-        few: ! '%{count} ������'
-        many: ! '%{count} �����'
-        one: ! '%{count} ������'
-        other: ! '%{count} ������'
-      x_months:
-        few: ! '%{count} ������'
-        many: ! '%{count} �������'
-        one: ! '%{count} �����'
-        other: ! '%{count} ������'
-      x_seconds:
-        few: ! '%{count} �������'
-        many: ! '%{count} ������'
-        one: ! '%{count} �������'
-        other: ! '%{count} �������'
-    prompts:
-      day: ����
-      hour: �����
-      minute: �����
-      month: �����
-      second: ������
-      year: ���
-  errors: &errors
-    format: ! '%{attribute} %{message}'
-    messages:
-      accepted: ����� �����������
-      blank: �� ����� ���� ������
-      confirmation: �� ��������� � ��������������
-      empty: �� ����� ���� ������
-      equal_to: ����� ����� ���� ��������, ������ %{count}
-      even: ����� ����� ���� �������� ��������
-      exclusion: ����� ����������������� ��������
-      greater_than: ����� ����� �������� ������� %{count}
-      greater_than_or_equal_to: ����� ����� �������� ������� ��� ������ %{count}
-      inclusion: ����� ����������������� ��������
-      invalid: ����� �������� ��������
-      less_than: ����� ����� �������� ������� ��� %{count}
-      less_than_or_equal_to: ����� ����� �������� ������� ��� ������ %{count}
-      not_a_number: �� �������� ������
-      not_an_integer: �� �������� ����� ������
-      odd: ����� ����� ���� ������ ��������
-      record_invalid: ! '�������� ������: %{errors}'
-      taken: ��� ����������
-      too_long:
-        few: ������� ������� ����� (�� ����� ���� ������ ��� %{count} �������)
-        many: ������� ������� ����� (�� ����� ���� ������ ��� %{count} ��������)
-        one: ������� ������� ����� (�� ����� ���� ������ ��� %{count} ������)
-        other: ������� ������� ����� (�� ����� ���� ������ ��� %{count} �������)
-      too_short:
-        few: ������������� ����� (�� ����� ���� ������ %{count} ��������)
-        many: ������������� ����� (�� ����� ���� ������ %{count} ��������)
-        one: ������������� ����� (�� ����� ���� ������ %{count} �������)
-        other: ������������� ����� (�� ����� ���� ������ %{count} �������)
-      wrong_length:
-        few: �������� ����� (����� ���� ������ ����� %{count} �������)
-        many: �������� ����� (����� ���� ������ ����� %{count} ��������)
-        one: �������� ����� (����� ���� ������ ����� %{count} ������)
-        other: �������� ����� (����� ���� ������ ����� %{count} �������)
-    template:
-      body: ! '�������� �������� �� ���������� ������:'
-      header:
-        few: ! '%{model}: ���������� �� ������� ��-�� %{count} ������'
-        many: ! '%{model}: ���������� �� ������� ��-�� %{count} ������'
-        one: ! '%{model}: ���������� �� ������� ��-�� %{count} ������'
-        other: ! '%{model}: ���������� �� ������� ��-�� %{count} ������'
-  helpers:
-    select:
-      prompt: ! '��������: '
-    submit:
-      create: ������� %{model}
-      submit: ��������� %{model}
-      update: ��������� %{model}
+      - :day
+      - :month
+      - :year
+
+  time:
+    formats:
+      default: "%a, %d %b %Y, %H:%M:%S %z"
+      time: "%H:%M"
+      short: "%d %b, %H:%M"
+      long: "%d %B %Y, %H:%M"
+
+    am: "утра"
+    pm: "вечера"
+
   number:
+    format:
+      separator: ","
+      delimiter: " "
+      precision: 3
+
     currency:
       format:
-        delimiter: ! ' '
-        format: ! '%n %u'
+        format: "%n %u"
+        unit: "руб."
+        separator: "."
+        delimiter: " "
         precision: 2
-        separator: .
-        significant: false
-        strip_insignificant_zeros: false
-        unit: ���.
-    format:
-      delimiter: ! ' '
-      precision: 3
-      separator: .
-      significant: false
-      strip_insignificant_zeros: false
-    human:
-      decimal_units:
-        format: ! '%n %u'
-        units:
-          billion:
-            few: ����������
-            many: ����������
-            one: ��������
-            other: ����������
-          million:
-            few: ���������
-            many: ���������
-            one: �������
-            other: ���������
-          quadrillion:
-            few: �������������
-            many: �������������
-            one: �����������
-            other: �������������
-          thousand:
-            few: �����
-            many: �����
-            one: ������
-            other: �����
-          trillion:
-            few: ����������
-            many: ����������
-            one: ��������
-            other: ����������
-          unit: ''
-      format:
-        delimiter: ''
-        precision: 1
-        significant: false
-        strip_insignificant_zeros: false
-      storage_units:
-        format: ! '%n %u'
-        units:
-          byte:
-            few: �����
-            many: ����
-            one: ����
-            other: �����
-          gb: ��
-          kb: ��
-          mb: ��
-          tb: ��
+
     percentage:
       format:
-        delimiter: ''
+        delimiter: ""
+
     precision:
       format:
-        delimiter: ''
-  support:
-    array:
-      last_word_connector: ! ' � '
-      two_words_connector: ! ' � '
-      words_connector: ! ', '
-  time:
-    am: ����
-    formats:
-      default: ! '%a, %d %b %Y, %H:%M:%S %z'
-      long: ! '%d %B %Y, %H:%M'
-      short: ! '%d %b, %H:%M'
-    pm: ������
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
+        delimiter: ""
+
+    human:
+      format:
+        delimiter: ""
+        precision: 3
+      # Rails 2.2
+      # storage_units: [байт, КБ, МБ, ГБ, ТБ]
+
+      # Rails 2.3
+      storage_units:
+        # Storage units output formatting.
+        # %u is the storage unit, %n is the number (default: 2 MB)
+        format: "%n %u"
+        units:
+          byte:
+            one:   "байт"
+            few:   "байта"
+            many:  "байт"
+            other: "байта"
+          kb: "КБ"
+          mb: "МБ"
+          gb: "ГБ"
+          tb: "ТБ"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "меньше минуты"
+      less_than_x_seconds:
+        one:   "меньше %{count} секунды"
+        few:   "меньше %{count} секунд"
+        many:  "меньше %{count} секунд"
+        other: "меньше %{count} секунды"
+      x_seconds:
+        one:   "%{count} секунда"
+        few:   "%{count} секунды"
+        many:  "%{count} секунд"
+        other: "%{count} секунды"
+      less_than_x_minutes:
+        one:   "меньше %{count} минуты"
+        few:   "меньше %{count} минут"
+        many:  "меньше %{count} минут"
+        other: "меньше %{count} минуты"
+      x_minutes:
+        one:   "%{count} минуту"
+        few:   "%{count} минуты"
+        many:  "%{count} минут"
+        other: "%{count} минуты"
+      about_x_hours:
+        one:   "около %{count} часа"
+        few:   "около %{count} часов"
+        many:  "около %{count} часов"
+        other: "около %{count} часа"
+      x_days:
+        one:   "%{count} день"
+        few:   "%{count} дня"
+        many:  "%{count} дней"
+        other: "%{count} дня"
+      about_x_months:
+        one:   "около %{count} месяца"
+        few:   "около %{count} месяцев"
+        many:  "около %{count} месяцев"
+        other: "около %{count} месяца"
+      x_months:
+        one:   "%{count} месяц"
+        few:   "%{count} месяца"
+        many:  "%{count} месяцев"
+        other: "%{count} месяца"
+      about_x_years:
+        one:   "около %{count} года"
+        few:   "около %{count} лет"
+        many:  "около %{count} лет"
+        other: "около %{count} лет"
+      over_x_years:
+        one:   "больше %{count} года"
+        few:   "больше %{count} лет"
+        many:  "больше %{count} лет"
+        other: "больше %{count} лет"
+      almost_x_years:
+        one:   "почти 1 год"
+        few:   "почти %{count} года"
+        many:  "почти %{count} лет"
+        other: "почти %{count} года"
+    prompts:
+      year: "Год"
+      month: "Месяц"
+      day: "День"
+      hour: "Часов"
+      minute: "Минут"
+      second: "Секунд"
+
   activerecord:
     errors:
-      <<: *errors
+      template:
+        header:
+          one:   "%{model}: сохранение не удалось из-за %{count} ошибки"
+          few:   "%{model}: сохранение не удалось из-за %{count} ошибок"
+          many:  "%{model}: сохранение не удалось из-за %{count} ошибок"
+          other: "%{model}: сохранение не удалось из-за %{count} ошибки"
+
+        body: "Проблемы возникли со следующими полями:"
+
+      messages:
+        inclusion: "имеет непредусмотренное значение"
+        exclusion: "имеет зарезервированное значение"
+        invalid: "имеет неверное значение"
+        confirmation: "не совпадает с подтверждением"
+        accepted: "нужно подтвердить"
+        empty: "не может быть пустым"
+        blank: "не может быть пустым"
+        too_long:
+          one:   "слишком большой длины (не может быть больше чем %{count} символ)"
+          few:   "слишком большой длины (не может быть больше чем %{count} символа)"
+          many:  "слишком большой длины (не может быть больше чем %{count} символов)"
+          other: "слишком большой длины (не может быть больше чем %{count} символа)"
+        too_short:
+          one:   "недостаточной длины (не может быть меньше %{count} символа)"
+          few:   "недостаточной длины (не может быть меньше %{count} символов)"
+          many:  "недостаточной длины (не может быть меньше %{count} символов)"
+          other: "недостаточной длины (не может быть меньше %{count} символа)"
+        wrong_length:
+          one:   "неверной длины (может быть длиной ровно %{count} символ)"
+          few:   "неверной длины (может быть длиной ровно %{count} символа)"
+          many:  "неверной длины (может быть длиной ровно %{count} символов)"
+          other: "неверной длины (может быть длиной ровно %{count} символа)"
+        taken: "уже существует"
+        not_a_number: "не является числом"
+        greater_than: "может иметь значение большее %{count}"
+        greater_than_or_equal_to: "может иметь значение большее или равное %{count}"
+        equal_to: "может иметь лишь значение, равное %{count}"
+        less_than: "может иметь значение меньшее чем %{count}"
+        less_than_or_equal_to: "может иметь значение меньшее или равное %{count}"
+        odd: "может иметь лишь нечетное значение"
+        even: "может иметь лишь четное значение"
+        greater_than_start_date: "должна быть позднее даты начала"
+        not_same_project: "не относится к одному проекту"
+        circular_dependency: "Такая связь приведет к циклической зависимости"
+        cant_link_an_issue_with_a_descendant: "Задача не может быть связана со своей подзадачей"
+
+  support:
+    array:
+      # Rails 2.2
+      sentence_connector: "и"
+      skip_last_comma: true
+
+      # Rails 2.3
+      words_connector: ", "
+      two_words_connector: " и "
+      last_word_connector: " и "
+
+  actionview_instancetag_blank_option: Выберите
+
+  button_activate: Активировать
+  button_add: Добавить
+  button_annotate: Авторство
+  button_apply: Применить
+  button_archive: Архивировать
+  button_back: Назад
+  button_cancel: Отмена
+  button_change_password: Изменить пароль
+  button_change: Изменить
+  button_check_all: Отметить все
+  button_clear: Очистить
+  button_configure: Параметры
+  button_copy: Копировать
+  button_create: Создать
+  button_create_and_continue: Создать и продолжить
+  button_delete: Удалить
+  button_download: Загрузить
+  button_edit: Редактировать
+  button_edit_associated_wikipage: "Редактировать связанную wiki-страницу: %{page_title}"
+  button_list: Список
+  button_lock: Заблокировать
+  button_login: Вход
+  button_log_time: Затраченное время
+  button_move: Переместить
+  button_quote: Цитировать
+  button_rename: Переименовать
+  button_reply: Ответить
+  button_reset: Сбросить
+  button_rollback: Вернуться к данной версии
+  button_save: Сохранить
+  button_sort: Сортировать
+  button_submit: Принять
+  button_test: Проверить
+  button_unarchive: Разархивировать
+  button_uncheck_all: Очистить
+  button_unlock: Разблокировать
+  button_unwatch: Не следить
+  button_update: Обновить
+  button_view: Просмотреть
+  button_watch: Следить
+
+  default_activity_design: Проектирование
+  default_activity_development: Разработка
+  default_doc_category_tech: Техническая документация
+  default_doc_category_user: Пользовательская документация
+  default_issue_status_in_progress: В работе
+  default_issue_status_closed: Закрыта
+  default_issue_status_feedback: Обратная связь
+  default_issue_status_new: Новая
+  default_issue_status_rejected: Отклонена
+  default_issue_status_resolved: Решена
+  default_priority_high: Высокий
+  default_priority_immediate: Немедленный
+  default_priority_low: Низкий
+  default_priority_normal: Нормальный
+  default_priority_urgent: Срочный
+  default_role_developer: Разработчик
+  default_role_manager: Менеджер
+  default_role_reporter: Репортёр
+  default_tracker_bug: Ошибка
+  default_tracker_feature: Улучшение
+  default_tracker_support: Поддержка
+
+  enumeration_activities: Действия (учёт времени)
+  enumeration_doc_categories: Категории документов
+  enumeration_issue_priorities: Приоритеты задач
+
+  error_can_not_remove_role: Эта роль используется и не может быть удалена.
+  error_can_not_delete_custom_field: Невозможно удалить настраиваемое поле
+  error_can_not_delete_tracker: Этот трекер содержит задачи и не может быть удален.
+  error_can_t_load_default_data: "Конфигурация по умолчанию не была загружена: %{value}"
+  error_issue_not_found_in_project: Задача не была найдена или не прикреплена к этому проекту
+  error_scm_annotate: "Данные отсутствуют или не могут быть подписаны."
+  error_scm_command_failed: "Ошибка доступа к хранилищу: %{value}"
+  error_scm_not_found: Хранилище не содержит записи и/или исправления.
+  error_unable_to_connect: Невозможно подключиться (%{value})
+  error_unable_delete_issue_status: Невозможно удалить статус задачи
+
+  field_account: Учётная запись
+  field_activity: Деятельность
+  field_admin: Администратор
+  field_assignable: Задача может быть назначена этой роли
+  field_assigned_to: Назначена
+  field_attr_firstname: Имя
+  field_attr_lastname: Фамилия
+  field_attr_login: Атрибут Login
+  field_attr_mail: email
+  field_author: Автор
+  field_auth_source: Режим аутентификации
+  field_base_dn: BaseDN
+  field_category: Категория
+  field_column_names: Столбцы
+  field_comments: Комментарий
+  field_comments_sorting: Отображение комментариев
+  field_content: Content
+  field_created_on: Создано
+  field_default_value: Значение по умолчанию
+  field_delay: Отложить
+  field_description: Описание
+  field_done_ratio: Готовность
+  field_downloads: Загрузки
+  field_due_date: Дата выполнения
+  field_editable: Редактируемое
+  field_effective_date: Дата
+  field_estimated_hours: Оценка времени
+  field_field_format: Формат
+  field_filename: Файл
+  field_filesize: Размер
+  field_firstname: Имя
+  field_fixed_version: Версия
+  field_hide_mail: Скрывать мой email
+  field_homepage: Стартовая страница
+  field_host: Компьютер
+  field_hours: час(а,ов)
+  field_identifier: Уникальный идентификатор
+  field_identity_url: OpenID URL
+  field_is_closed: Задача закрыта
+  field_is_default: Значение по умолчанию
+  field_is_filter: Используется в качестве фильтра
+  field_is_for_all: Для всех проектов
+  field_is_in_roadmap: Задачи, отображаемые в оперативном плане
+  field_is_public: Общедоступный
+  field_is_required: Обязательное
+  field_issue_to: Связанные задачи
+  field_issue: Задача
+  field_language: Язык
+  field_last_login_on: Последнее подключение
+  field_lastname: Фамилия
+  field_login: Пользователь
+  field_mail: Email
+  field_mail_notification: Уведомления по email
+  field_max_length: Максимальная длина
+  field_min_length: Минимальная длина
+  field_name: Имя
+  field_new_password: Новый пароль
+  field_notes: Примечания
+  field_onthefly: Создание пользователя на лету
+  field_parent_title: Родительская страница
+  field_parent: Родительский проект
+  field_parent_issue: Родительская задача
+  field_password_confirmation: Подтверждение
+  field_password: Пароль
+  field_port: Порт
+  field_possible_values: Возможные значения
+  field_priority: Приоритет
+  field_project: Проект
+  field_redirect_existing_links: Перенаправить существующие ссылки
+  field_regexp: Регулярное выражение
+  field_role: Роль
+  field_searchable: Доступно для поиска
+  field_spent_on: Дата
+  field_start_date: Начата
+  field_start_page: Стартовая страница
+  field_status: Статус
+  field_subject: Тема
+  field_subproject: Подпроект
+  field_summary: Краткое описание
+  field_text: Текстовое поле
+  field_time_entries: Затраченное время
+  field_time_zone: Часовой пояс
+  field_title: Заголовок
+  field_tracker: Трекер
+  field_type: Тип
+  field_updated_on: Обновлено
+  field_url: URL
+  field_user: Пользователь
+  field_value: Значение
+  field_version: Версия
+  field_watcher: Наблюдатель
+
+  general_csv_decimal_separator: ','
+  general_csv_encoding: UTF-8
+  general_csv_separator: ';'
+  general_first_day_of_week: '1'
+  general_lang_name: 'Russian (Русский)'
+  general_pdf_encoding: UTF-8
+  general_text_no: 'нет'
+  general_text_No: 'Нет'
+  general_text_yes: 'да'
+  general_text_Yes: 'Да'
+
+  gui_validation_error: 1 ошибка
+  gui_validation_error_plural: "%{count} ошибок"
+  gui_validation_error_plural2: "%{count} ошибки"
+  gui_validation_error_plural5: "%{count} ошибок"
+
+  label_activity: Действия
+  label_add_another_file: Добавить ещё один файл
+  label_added_time_by: "Добавил(а) %{author} %{age} назад"
+  label_added: добавлено
+  label_add_note: Добавить замечание
+  label_administration: Администрирование
+  label_age: Возраст
+  label_ago: дней(я) назад
+  label_all_time: всё время
+  label_all_words: Все слова
+  label_all: все
+  label_and_its_subprojects: "%{value} и все подпроекты"
+  label_applied_status: Применимый статус
+  label_ascending: По возрастанию
+  label_assigned_to_me_issues: Мои задачи
+  label_associated_revisions: Связанные редакции
+  label_attachment: Файл
+  label_attachment_delete: Удалить файл
+  label_attachment_new: Новый файл
+  label_attachment_plural: Файлы
+  label_attribute: Атрибут
+  label_attribute_plural: Атрибуты
+  label_authentication: Аутентификация
+  label_auth_source: Режим аутентификации
+  label_auth_source_new: Новый режим аутентификации
+  label_auth_source_plural: Режимы аутентификации
+  label_blocked_by: блокируется
+  label_blocks: блокирует
+  label_board: Форум
+  label_board_new: Новый форум
+  label_board_plural: Форумы
+  label_boolean: Логический
+  label_browse: Обзор
+  label_bulk_edit_selected_issues: Редактировать все выбранные задачи
+  label_calendar: Календарь
+  label_calendar_filter: Включая
+  label_calendar_no_assigned: не мои
+  label_change_plural: Правки
+  label_change_properties: Изменить свойства
+  label_change_status: Изменить статус
+  label_change_view_all: Просмотреть все изменения
+  label_changes_details: Подробности по всем изменениям
+  label_changeset_plural: Изменения
+  label_chronological_order: В хронологическом порядке
+  label_closed_issues: закрыто
+  label_closed_issues_plural: закрыто
+  label_closed_issues_plural2: закрыто
+  label_closed_issues_plural5: закрыто
+  label_comment: комментарий
+  label_comment_add: Оставить комментарий
+  label_comment_added: Добавленный комментарий
+  label_comment_delete: Удалить комментарии
+  label_comment_plural: Комментарии
+  label_comment_plural2: комментария
+  label_comment_plural5: комментариев
+  label_commits_per_author: Изменений на пользователя
+  label_commits_per_month: Изменений в месяц
+  label_confirmation: Подтверждение
+  label_contains: содержит
+  label_copied: скопировано
+  label_copy_workflow_from: Скопировать последовательность действий из
+  label_current_status: Текущий статус
+  label_current_version: Текущая версия
+  label_custom_field: Настраиваемое поле
+  label_custom_field_new: Новое настраиваемое поле
+  label_custom_field_plural: Настраиваемые поля
+  label_date_from: С
+  label_date_from_to: С %{start} по %{end}
+  label_date_range: временной интервал
+  label_date_to: по
+  label_date: Дата
+  label_day_plural: дней(я)
+  label_default: По умолчанию
+  label_default_columns: Столбцы по умолчанию
+  label_deleted: удалено
+  label_descending: По убыванию
+  label_details: Подробности
+  label_diff_inline: в тексте
+  label_diff_side_by_side: рядом
+  label_disabled: отключено
+  label_display: Отображение
+  label_display_per_page: "На страницу: %{value}"
+  label_document: Документ
+  label_document_added: Добавлен документ
+  label_document_new: Новый документ
+  label_document_plural: Документы
+  label_download: "%{count} загрузка"
+  label_download_plural: "%{count} скачиваний"
+  label_download_plural2: "%{count} загрузки"
+  label_download_plural5: "%{count} загрузок"
+  label_downloads_abbr: Скачиваний
+  label_duplicated_by: дублируется
+  label_duplicates: дублирует
+  label_end_to_end: с конца к концу
+  label_end_to_start: с конца к началу
+  label_enumeration_new: Новое значение
+  label_enumerations: Списки значений
+  label_environment: Окружение
+  label_equals: является
+  label_example: Пример
+  label_export_to: Экспортировать в
+  label_feed_plural: RSS
+  label_feeds_access_key_created_on: "Ключ доступа RSS создан %{value} назад"
+  label_f_hour: "%{value} час"
+  label_f_hour_plural: "%{value} часов"
+  label_file_added: Добавлен файл
+  label_file_plural: Файлы
+  label_filter_add: Добавить фильтр
+  label_filter_plural: Фильтры
+  label_float: С плавающей точкой
+  label_follows: предыдущая
+  label_gantt: Диаграмма Ганта
+  label_general: Общее
+  label_generate_key: Сгенерировать ключ
+  label_greater_or_equal: ">="
+  label_help: Помощь
+  label_history: История
+  label_home: Домашняя страница
+  label_incoming_emails: Приём сообщений
+  label_index_by_date: История страниц
+  label_index_by_title: Оглавление
+  label_information_plural: Информация
+  label_information: Информация
+  label_in_less_than: менее чем
+  label_in_more_than: более чем
+  label_integer: Целый
+  label_internal: Внутренний
+  label_in: в
+  label_issue: Задача
+  label_issue_added: Добавлена задача
+  label_issue_category_new: Новая категория
+  label_issue_category_plural: Категории задачи
+  label_issue_category: Категория задачи
+  label_issue_new: Новая задача
+  label_issue_plural: Задачи
+  label_issues_by: "Сортировать по %{value}"
+  label_issue_status_new: Новый статус
+  label_issue_status_plural: Статусы задач
+  label_issue_status: Статус задачи
+  label_issue_tracking: Задачи
+  label_issue_updated: Обновлена задача
+  label_issue_view_all: Просмотреть все задачи
+  label_issue_watchers: Наблюдатели
+  label_jump_to_a_project: Перейти к проекту...
+  label_language_based: На основе языка
+  label_last_changes: "менее %{count} изменений"
+  label_last_login: Последнее подключение
+  label_last_month: последний месяц
+  label_last_n_days: "последние %{count} дней"
+  label_last_week: последняя неделя
+  label_latest_revision: Последняя редакция
+  label_latest_revision_plural: Последние редакции
+  label_ldap_authentication: Авторизация с помощью LDAP
+  label_less_or_equal: <=
+  label_less_than_ago: менее, чем дней(я) назад
+  label_list: Список
+  label_loading: Загрузка...
+  label_logged_as: Вошли как
+  label_login: Войти
+  label_login_with_open_id_option: или войти с помощью OpenID
+  label_logout: Выйти
+  label_max_size: Максимальный размер
+  label_member_new: Новый участник
+  label_member: Участник
+  label_member_plural: Участники
+  label_message_last: Последнее сообщение
+  label_message_new: Новое сообщение
+  label_message_plural: Сообщения
+  label_message_posted: Добавлено сообщение
+  label_me: мне
+  label_min_max_length: Минимальная - максимальная длина
+  label_modification: "%{count} изменение"
+  label_modification_plural: "%{count} изменений"
+  label_modification_plural2: "%{count} изменения"
+  label_modification_plural5: "%{count} изменений"
+  label_modified: изменено
+  label_module_plural: Модули
+  label_months_from: месяцев(ца) с
+  label_month: Месяц
+  label_more_than_ago: более, чем дней(я) назад
+  label_more: Больше
+  label_my_account: Моя учётная запись
+  label_my_page: Моя страница
+  label_my_page_block: Блок моей страницы
+  label_my_projects: Мои проекты
+  label_new: Новый
+  label_new_statuses_allowed: Разрешенные новые статусы
+  label_news_added: Добавлена новость
+  label_news_latest: Последние новости
+  label_news_new: Добавить новость
+  label_news_plural: Новости
+  label_news_view_all: Посмотреть все новости
+  label_news: Новости
+  label_next: Следующее
+  label_nobody: никто
+  label_no_change_option: (Нет изменений)
+  label_no_data: Нет данных для отображения
+  label_none: отсутствует
+  label_not_contains: не содержит
+  label_not_equals: не является
+  label_open_issues: открыто
+  label_open_issues_plural: открыто
+  label_open_issues_plural2: открыто
+  label_open_issues_plural5: открыто
+  label_optional_description: Описание (необязательно)
+  label_options: Опции
+  label_overall_activity: Сводный отчёт действий
+  label_overview: Обзор
+  label_password_lost: Восстановление пароля
+  label_permissions_report: Отчёт по правам доступа
+  label_permissions: Права доступа
+  label_per_page: На страницу
+  label_personalize_page: Персонализировать данную страницу
+  label_planning: Планирование
+  label_please_login: Пожалуйста, войдите.
+  label_plugins: Модули
+  label_precedes: следующая
+  label_preferences: Предпочтения
+  label_preview: Предпросмотр
+  label_previous: Предыдущее
+  label_profile: Профиль
+  label_project: Проект
+  label_project_all: Все проекты
+  label_project_copy_notifications: Отправлять уведомления по электронной почте при копировании проекта
+  label_project_latest: Последние проекты
+  label_project_new: Новый проект
+  label_project_plural: Проекты
+  label_project_plural2: проекта
+  label_project_plural5: проектов
+  label_public_projects: Общие проекты
+  label_query: Сохранённый запрос
+  label_query_new: Новый запрос
+  label_query_plural: Сохранённые запросы
+  label_read: Чтение...
+  label_register: Регистрация
+  label_registered_on: Зарегистрирован(а)
+  label_registration_activation_by_email: активация учётных записей по email
+  label_registration_automatic_activation: автоматическая активация учётных записей
+  label_registration_manual_activation: активировать учётные записи вручную
+  label_related_issues: Связанные задачи
+  label_relates_to: связана с
+  label_relation_delete: Удалить связь
+  label_relation_new: Новое отношение
+  label_renamed: переименовано
+  label_reply_plural: Ответы
+  label_report: Отчёт
+  label_report_plural: Отчёты
+  label_reported_issues: Созданные задачи
+  label_repository: Хранилище
+  label_repository_plural: Хранилища
+  label_result_plural: Результаты
+  label_reverse_chronological_order: В обратном порядке
+  label_revision: Редакция
+  label_revision_plural: Редакции
+  label_roadmap: Оперативный план
+  label_roadmap_due_in: "В срок %{value}"
+  label_roadmap_no_issues: Нет задач для данной версии
+  label_roadmap_overdue: "опоздание %{value}"
+  label_role: Роль
+  label_role_and_permissions: Роли и права доступа
+  label_role_new: Новая роль
+  label_role_plural: Роли
+  label_scm: Тип хранилища
+  label_search: Поиск
+  label_search_titles_only: Искать только в названиях
+  label_send_information: Отправить пользователю информацию по учётной записи
+  label_send_test_email: Послать email для проверки
+  label_settings: Настройки
+  label_show_completed_versions: Показывать завершённые версии
+  label_sort: Сортировать
+  label_sort_by: "Сортировать по %{value}"
+  label_sort_higher: Вверх
+  label_sort_highest: В начало
+  label_sort_lower: Вниз
+  label_sort_lowest: В конец
+  label_spent_time: Затраченное время
+  label_start_to_end: с начала к концу
+  label_start_to_start: с начала к началу
+  label_statistics: Статистика
+  label_stay_logged_in: Оставаться в системе
+  label_string: Текст
+  label_subproject_plural: Подпроекты
+  label_subtask_plural: Подзадачи
+  label_text: Длинный текст
+  label_theme: Тема
+  label_this_month: этот месяц
+  label_this_week: на этой неделе
+  label_this_year: этот год
+  label_time_tracking: Учёт времени
+  label_timelog_today: Расход времени на сегодня
+  label_today: сегодня
+  label_topic_plural: Темы
+  label_total: Всего
+  label_tracker: Трекер
+  label_tracker_new: Новый трекер
+  label_tracker_plural: Трекеры
+  label_updated_time: "Обновлено %{value} назад"
+  label_updated_time_by: "Обновлено %{author} %{age} назад"
+  label_used_by: Используется
+  label_user: Пользователь
+  label_user_activity: "Действия пользователя %{value}"
+  label_user_mail_no_self_notified: "Не извещать об изменениях, которые я сделал сам"
+  label_user_mail_option_all: "О всех событиях во всех моих проектах"
+  label_user_mail_option_selected: "О всех событиях только в выбранном проекте..."
+  label_user_mail_option_only_owner: Только для объектов, для которых я являюсь владельцем
+  label_user_mail_option_only_my_events: Только для объектов, которые я отслеживаю или в которых участвую
+  label_user_mail_option_only_assigned: Только для объектов, которые назначены мне
+  label_user_new: Новый пользователь
+  label_user_plural: Пользователи
+  label_version: Версия
+  label_version_new: Новая версия
+  label_version_plural: Версии
+  label_view_diff: Просмотреть отличия
+  label_view_revisions: Просмотреть редакции
+  label_watched_issues: Отслеживаемые задачи
+  label_week: Неделя
+  label_wiki: Wiki
+  label_wiki_edit: Редактирование Wiki
+  label_wiki_edit_plural: Wiki
+  label_wiki_page: Страница Wiki
+  label_wiki_page_plural: Страницы Wiki
+  label_workflow: Последовательность действий
+  label_x_closed_issues_abbr:
+    zero:  "0 закрыто"
+    one:   "1 закрыт"
+    few:   "%{count} закрыто"
+    many:  "%{count} закрыто"
+    other: "%{count} закрыто"
+  label_x_comments:
+    zero:  "нет комментариев"
+    one:   "1 комментарий"
+    few:   "%{count} комментария"
+    many:  "%{count} комментариев"
+    other: "%{count} комментариев"
+  label_x_open_issues_abbr:
+    zero:  "0 открыто"
+    one:   "1 открыт"
+    few:   "%{count} открыто"
+    many:  "%{count} открыто"
+    other: "%{count} открыто"
+  label_x_open_issues_abbr_on_total:
+    zero:  "0 открыто / %{total}"
+    one:   "1 открыт / %{total}"
+    few:   "%{count} открыто / %{total}"
+    many:  "%{count} открыто / %{total}"
+    other: "%{count} открыто / %{total}"
+  label_x_projects:
+    zero:  "нет проектов"
+    one:   "1 проект"
+    few:   "%{count} проекта"
+    many:  "%{count} проектов"
+    other: "%{count} проектов"
+  label_year: Год
+  label_yesterday: вчера
+
+  mail_body_account_activation_request: "Зарегистрирован новый пользователь (%{value}). Учётная запись ожидает Вашего утверждения:"
+  mail_body_account_information: Информация о Вашей учётной записи
+  mail_body_account_information_external: "Вы можете использовать Вашу %{value} учётную запись для входа."
+  mail_body_lost_password: 'Для изменения пароля пройдите по следующей ссылке:'
+  mail_body_register: 'Для активации учётной записи пройдите по следующей ссылке:'
+  mail_body_reminder: "%{count} назначенных на Вас задач на следующие %{days} дней:"
+  mail_subject_account_activation_request: "Запрос на активацию пользователя в системе %{value}"
+  mail_subject_lost_password: "Ваш %{value} пароль"
+  mail_subject_register: "Активация учётной записи %{value}"
+  mail_subject_reminder: "%{count} назначенных на Вас задач в ближайшие %{days} дней"
+
+  notice_account_activated: Ваша учётная запись активирована. Вы можете войти.
+  notice_account_invalid_creditentials: Неправильное имя пользователя или пароль
+  notice_account_lost_email_sent: Вам отправлено письмо с инструкциями по выбору нового пароля.
+  notice_account_password_updated: Пароль успешно обновлён.
+  notice_account_pending: "Ваша учётная запись создана и ожидает подтверждения администратора."
+  notice_account_register_done: Учётная запись успешно создана. Для активации Вашей учётной записи пройдите по ссылке, которая выслана Вам по электронной почте.
+  notice_account_unknown_email: Неизвестный пользователь.
+  notice_account_updated: Учётная запись успешно обновлена.
+  notice_account_wrong_password: Неверный пароль
+  notice_can_t_change_password: Для данной учётной записи используется источник внешней аутентификации. Невозможно изменить пароль.
+  notice_default_data_loaded: Была загружена конфигурация по умолчанию.
+  notice_email_error: "Во время отправки письма произошла ошибка (%{value})"
+  notice_email_sent: "Отправлено письмо %{value}"
+  notice_failed_to_save_issues: "Не удалось сохранить %{count} пункт(ов) из %{total} выбранных: %{ids}."
+  notice_failed_to_save_members: "Не удалось сохранить участника(ов): %{errors}."
+  notice_feeds_access_key_reseted: Ваш ключ доступа RSS был сброшен.
+  notice_file_not_found: Страница, на которую Вы пытаетесь зайти, не существует или удалена.
+  notice_locking_conflict: Информация обновлена другим пользователем.
+  notice_no_issue_selected: "Не выбрано ни одной задачи! Пожалуйста, отметьте задачи, которые Вы хотите отредактировать."
+  notice_not_authorized: У Вас нет прав для посещения данной страницы.
+  notice_successful_connection: Подключение успешно установлено.
+  notice_successful_create: Создание успешно.
+  notice_successful_delete: Удаление успешно.
+  notice_successful_update: Обновление успешно.
+  notice_unable_delete_version: Невозможно удалить версию.
+
+  permission_add_issues: Добавление задач
+  permission_add_issue_notes: Добавление примечаний
+  permission_add_issue_watchers: Добавление наблюдателей
+  permission_add_messages: Отправка сообщений
+  permission_browse_repository: Просмотр хранилища
+  permission_comment_news: Комментирование новостей
+  permission_commit_access: Изменение файлов в хранилище
+  permission_delete_issues: Удаление задач
+  permission_delete_messages: Удаление сообщений
+  permission_delete_own_messages: Удаление собственных сообщений
+  permission_delete_wiki_pages: Удаление wiki-страниц
+  permission_delete_wiki_pages_attachments: Удаление прикреплённых файлов
+  permission_edit_issue_notes: Редактирование примечаний
+  permission_edit_issues: Редактирование задач
+  permission_edit_messages: Редактирование сообщений
+  permission_edit_own_issue_notes: Редактирование собственных примечаний
+  permission_edit_own_messages: Редактирование собственных сообщений
+  permission_edit_own_time_entries: Редактирование собственного учёта времени
+  permission_edit_project: Редактирование проектов
+  permission_edit_time_entries: Редактирование учёта времени
+  permission_edit_wiki_pages: Редактирование wiki-страниц
+  permission_export_wiki_pages: Экспорт wiki-страниц
+  permission_log_time: Учёт затраченного времени
+  permission_view_changesets: Просмотр изменений хранилища
+  permission_view_time_entries: Просмотр затраченного времени
+  permission_manage_project_activities: Управление типами действий для проекта
+  permission_manage_boards: Управление форумами
+  permission_manage_categories: Управление категориями задач
+  permission_manage_documents: Управление документами
+  permission_manage_files: Управление файлами
+  permission_manage_issue_relations: Управление связыванием задач
+  permission_manage_members: Управление участниками
+  permission_manage_news: Управление новостями
+  permission_manage_public_queries: Управление общими запросами
+  permission_manage_repository: Управление хранилищем
+  permission_manage_subtasks: Управление подзадачами
+  permission_manage_versions: Управление версиями
+  permission_manage_wiki: Управление Wiki
+  permission_move_issues: Перенос задач
+  permission_protect_wiki_pages: Блокирование wiki-страниц
+  permission_rename_wiki_pages: Переименование wiki-страниц
+  permission_save_queries: Сохранение запросов
+  permission_select_project_modules: Выбор модулей проекта
+  permission_view_calendar: Просмотр календаря
+  permission_view_documents: Просмотр документов
+  permission_view_files: Просмотр файлов
+  permission_view_gantt: Просмотр диаграммы Ганта
+  permission_view_issue_watchers: Просмотр списка наблюдателей
+  permission_view_messages: Просмотр сообщений
+  permission_view_wiki_edits: Просмотр истории Wiki
+  permission_view_wiki_pages: Просмотр Wiki
+
+  project_module_boards: Форумы
+  project_module_documents: Документы
+  project_module_files: Файлы
+  project_module_issue_tracking: Задачи
+  project_module_news: Новости
+  project_module_repository: Хранилище
+  project_module_time_tracking: Учёт времени
+  project_module_wiki: Wiki
+  project_module_gantt: Диаграмма Ганта
+  project_module_calendar: Календарь
+
+  setting_activity_days_default: Количество дней, отображаемых в Действиях
+  setting_app_subtitle: Подзаголовок приложения
+  setting_app_title: Название приложения
+  setting_attachment_max_size: Максимальный размер вложения
+  setting_autofetch_changesets: Автоматически следить за изменениями хранилища
+  setting_autologin: Автоматический вход
+  setting_bcc_recipients: Использовать скрытые копии (BCC)
+  setting_cache_formatted_text: Кешировать форматированный текст
+  setting_commit_fix_keywords: Назначение ключевых слов
+  setting_commit_ref_keywords: Ключевые слова для поиска
+  setting_cross_project_issue_relations: Разрешить пересечение задач по проектам
+  setting_date_format: Формат даты
+  setting_default_language: Язык по умолчанию
+  setting_default_notification_option: Способ оповещения по умолчанию
+  setting_default_projects_public: Новые проекты являются общедоступными
+  setting_diff_max_lines_displayed: Максимальное число строк для diff
+  setting_display_subprojects_issues: Отображение подпроектов по умолчанию
+  setting_emails_footer: Подстрочные примечания письма
+  setting_enabled_scm: Включённые SCM
+  setting_feeds_limit: Ограничение количества заголовков для RSS потока
+  setting_file_max_size_displayed: Максимальный размер текстового файла для отображения
+  setting_gravatar_enabled: Использовать аватар пользователя из Gravatar
+  setting_host_name: Имя компьютера
+  setting_issue_list_default_columns: Столбцы, отображаемые в списке задач по умолчанию
+  setting_issues_export_limit: Ограничение по экспортируемым задачам
+  setting_login_required: Необходима аутентификация
+  setting_mail_from: Исходящий email адрес
+  setting_mail_handler_api_enabled: Включить веб-сервис для входящих сообщений
+  setting_mail_handler_api_key: API ключ
+  setting_openid: Разрешить OpenID для входа и регистрации
+  setting_per_page_options: Количество записей на страницу
+  setting_plain_text_mail: Только простой текст (без HTML)
+  setting_protocol: Протокол
+  setting_repository_log_display_limit: Максимальное количество редакций, отображаемых в журнале изменений
+  setting_self_registration: Саморегистрация
+  setting_sequential_project_identifiers: Генерировать последовательные идентификаторы проектов
+  setting_sys_api_enabled: Включить веб-сервис для управления хранилищем
+  setting_text_formatting: Форматирование текста
+  setting_time_format: Формат времени
+  setting_user_format: Формат отображения имени
+  setting_welcome_text: Текст приветствия
+  setting_wiki_compression: Сжатие истории Wiki
+
+  status_active: активен
+  status_locked: заблокирован
+  status_registered: зарегистрирован
+
+  text_are_you_sure_with_children: Удалить задачу и все её подзадачи?
+  text_are_you_sure: Вы уверены?
+  text_assign_time_entries_to_project: Прикрепить зарегистрированное время к проекту
+  text_caracters_maximum: "Максимум %{count} символов(а)."
+  text_caracters_minimum: "Должно быть не менее %{count} символов."
+  text_comma_separated: Допустимы несколько значений (через запятую).
+  text_custom_field_possible_values_info: 'По одному значению в каждой строке'
+  text_default_administrator_account_changed: Учётная запись администратора по умолчанию изменена
+  text_destroy_time_entries_question: "На эту задачу зарегистрировано %{hours} часа(ов) затраченного времени. Что Вы хотите предпринять?"
+  text_destroy_time_entries: Удалить зарегистрированное время
+  text_diff_truncated: '... Этот diff ограничен, так как превышает максимальный отображаемый размер.'
+  text_email_delivery_not_configured: "Параметры работы с почтовым сервером не настроены и функция уведомления по email не активна.\nНастроить параметры для Вашего SMTP-сервера Вы можете в файле config/configuration.yml. Для применения изменений перезапустите приложение."
+  text_enumeration_category_reassign_to: 'Назначить им следующее значение:'
+  text_enumeration_destroy_question: "%{count} объект(а,ов) связаны с этим значением."
+  text_file_repository_writable: Хранилище с доступом на запись
+  text_issue_added: "Создана новая задача %{id} (%{author})."
+  text_issue_category_destroy_assignments: Удалить назначения категории
+  text_issue_category_destroy_question: "Несколько задач (%{count}) назначено в данную категорию. Что Вы хотите предпринять?"
+  text_issue_category_reassign_to: Переназначить задачи для данной категории
+  text_issues_destroy_confirmation: 'Вы уверены, что хотите удалить выбранные задачи?'
+  text_issues_ref_in_commit_messages: Сопоставление и изменение статуса задач исходя из текста сообщений
+  text_issue_updated: "Задача %{id} была обновлена (%{author})."
+  text_journal_changed: "Параметр %{label} изменился с %{old} на %{new}"
+  text_journal_deleted: "Значение %{old} параметра %{label} удалено"
+  text_journal_set_to: "Параметр %{label} изменился на %{value}"
+  text_length_between: "Длина между %{min} и %{max} символов."
+  text_load_default_configuration: Загрузить конфигурацию по умолчанию
+  text_min_max_length_info: 0 означает отсутствие ограничений
+  text_no_configuration_data: "Роли, трекеры, статусы задач и оперативный план не были сконфигурированы.\nНастоятельно рекомендуется загрузить конфигурацию по-умолчанию. Вы сможете её изменить потом."
+  text_plugin_assets_writable: Каталог модулей доступен для записи
+  text_project_destroy_confirmation: Вы настаиваете на удалении данного проекта и всей относящейся к нему информации?
+  text_reassign_time_entries: 'Перенести зарегистрированное время на следующую задачу:'
+  text_regexp_info: "например: ^[A-Z0-9]+$"
+  text_repository_usernames_mapping: "Выберите или обновите пользователя Redmine, связанного с найденными именами в журнале хранилища.\nПользователи с одинаковыми именами или email в Redmine и хранилище связываются автоматически."
+  text_rmagick_available: Доступно использование RMagick (опционально)
+  text_select_mail_notifications: Выберите действия, при которых будет отсылаться уведомление на электронную почту.
+  text_select_project_modules: 'Выберите модули, которые будут использованы в проекте:'
+  text_status_changed_by_changeset: "Реализовано в %{value} редакции."
+  text_subprojects_destroy_warning: "Подпроекты: %{value} также будут удалены."
+  text_tip_issue_begin_day: дата начала задачи
+  text_tip_issue_begin_end_day: начало задачи и окончание её в этот же день
+  text_tip_issue_end_day: дата завершения задачи
+  text_tracker_no_workflow: Для этого трекера последовательность действий не определена
+  text_unallowed_characters: Запрещенные символы
+  text_user_mail_option: "Для невыбранных проектов, Вы будете получать уведомления только о том, что просматриваете или в чем участвуете (например, задачи, автором которых Вы являетесь, или которые Вам назначены)."
+  text_user_wrote: "%{value} писал(а):"
+  text_wiki_destroy_confirmation: Вы уверены, что хотите удалить данную Wiki и все её содержимое?
+  text_workflow_edit: Выберите роль и трекер для редактирования последовательности состояний
+
+  warning_attachments_not_saved: "%{count} файл(ов) невозможно сохранить."
+  text_wiki_page_destroy_question: Эта страница имеет %{descendants} дочерних страниц и их потомков. Что вы хотите предпринять?
+  text_wiki_page_reassign_children: Переопределить дочерние страницы на текущую страницу
+  text_wiki_page_nullify_children: Сделать дочерние страницы главными страницами
+  text_wiki_page_destroy_children: Удалить дочерние страницы и всех их потомков
+  setting_password_min_length: Минимальная длина пароля
+  field_group_by: Группировать результаты по
+  mail_subject_wiki_content_updated: "Wiki-страница '%{id}' была обновлена"
+  label_wiki_content_added: Добавлена wiki-страница
+  mail_subject_wiki_content_added: "Wiki-страница  '%{id}' была добавлена"
+  mail_body_wiki_content_added: "%{author} добавил(а) wiki-страницу '%{id}'."
+  label_wiki_content_updated: Обновлена wiki-страница
+  mail_body_wiki_content_updated: "%{author} обновил(а) wiki-страницу '%{id}'."
+  permission_add_project: Создание проекта
+  setting_new_project_user_role_id: Роль, назначаемая пользователю, создавшему проект
+  label_view_all_revisions: Показать все ревизии
+  label_tag: Метка
+  label_branch: Ветвь
+  error_no_tracker_in_project: С этим проектом не ассоциирован ни один трекер. Проверьте настройки проекта.
+  error_no_default_issue_status: Не определен статус задач по умолчанию. Проверьте настройки (см. "Администрирование -> Статусы задач").
+  label_group_plural: Группы
+  label_group: Группа
+  label_group_new: Новая группа
+  label_time_entry_plural: Затраченное время
+  text_journal_added: "%{label} %{value} добавлен"
+  field_active: Активно
+  enumeration_system_activity: Системное
+  permission_delete_issue_watchers: Удаление наблюдателей
+  version_status_closed: закрыт
+  version_status_locked: заблокирован
+  version_status_open: открыт
+  error_can_not_reopen_issue_on_closed_version: Задача, назначенная к закрытой версии, не сможет быть открыта снова
+  label_user_anonymous: Аноним
+  button_move_and_follow: Переместить и перейти
+  setting_default_projects_modules: Включенные по умолчанию модули для новых проектов
+  setting_gravatar_default: Изображение Gravatar по умолчанию
+  field_sharing: Совместное использование
+  label_version_sharing_hierarchy: С иерархией проектов
+  label_version_sharing_system: Со всеми проектами
+  label_version_sharing_descendants: С подпроектами
+  label_version_sharing_tree: С деревом проектов
+  label_version_sharing_none: Без совместного использования
+  error_can_not_archive_project: Этот проект не может быть заархивирован
+  button_duplicate: Дублировать
+  button_copy_and_follow: Копировать и продолжить
+  label_copy_source: Источник
+  setting_issue_done_ratio:  Рассчитывать готовность задачи с помощью поля
+  setting_issue_done_ratio_issue_status: Статус задачи
+  error_issue_done_ratios_not_updated: Параметр готовность задач не обновлён
+  error_workflow_copy_target: Выберите целевые трекеры и роли
+  setting_issue_done_ratio_issue_field: Готовность задачи
+  label_copy_same_as_target: То же, что и у цели
+  label_copy_target: Цель
+  notice_issue_done_ratios_updated: Параметр &laquo;готовность&raquo; обновлён.
+  error_workflow_copy_source: Выберите исходный трекер или роль
+  label_update_issue_done_ratios: Обновить готовность задач
+  setting_start_of_week: День начала недели
+  label_api_access_key: Ключ доступа к API
+  text_line_separated: Разрешено несколько значений (по одному значению в строку).
+  label_revision_id: Ревизия %{value}
+  permission_view_issues: Просмотр задач
+  label_display_used_statuses_only: Отображать только те статусы, которые используются в этом трекере
+  label_api_access_key_created_on: Ключ доступ к API был создан %{value} назад
+  label_feeds_access_key: Ключ доступа к RSS
+  notice_api_access_key_reseted: Ваш ключ доступа к API был сброшен.
+  setting_rest_api_enabled: Включить веб-сервис REST
+  button_show: Показать
+  label_missing_api_access_key: Отсутствует ключ доступа к API
+  label_missing_feeds_access_key: Отсутствует ключ доступа к RSS
+  setting_mail_handler_body_delimiters: Урезать письмо после одной из этих строк
+  permission_add_subprojects: Создание подпроектов
+  label_subproject_new: Новый подпроект
+  text_own_membership_delete_confirmation: |-
+    Вы собираетесь удалить некоторые или все права, из-за чего могут пропасть права на редактирование этого проекта.
+    Продолжить?
+  label_close_versions: Закрыть завершённые версии
+  label_board_sticky: Прикреплена
+  label_board_locked: Заблокирована
+  field_principal: Имя
+  text_zoom_out: Отдалить
+  text_zoom_in: Приблизить
+  notice_unable_delete_time_entry: Невозможно удалить запись журнала.
+  label_overall_spent_time: Всего затрачено времени
+  label_user_mail_option_none: Нет событий
+  field_member_of_group: Группа назначенного
+  field_assigned_to_role: Роль назначенного
+  notice_not_authorized_archived_project: Запрашиваемый проект был архивирован.
+  label_principal_search: "Найти пользователя или группу:"
+  label_user_search: "Найти пользователя:"
+  field_visible: Видимое
+  setting_emails_header: Заголовок письма
+
+  setting_commit_logtime_activity_id: Действие для учёта времени
+  text_time_logged_by_changeset: Учтено в редакции %{value}.
+  setting_commit_logtime_enabled: Включить учёт времени
+  notice_gantt_chart_truncated: Диаграмма будет усечена, поскольку превышено максимальное кол-во элементов, которые могут отображаться (%{max})
+  setting_gantt_items_limit: Максимальное кол-во элементов отображаемых на диаграмме Ганта
+  field_warn_on_leaving_unsaved: Предупреждать при закрытии страницы с несохранённым текстом
+  text_warn_on_leaving_unsaved: Текущая страница содержит несохранённый текст, который будет потерян, если вы покинете эту страницу.
+  label_my_queries: Мои сохранённые запросы
+  text_journal_changed_no_detail: "%{label} обновлено"
+  label_news_comment_added: Добавлен комментарий к новости
+  button_expand_all: Развернуть все
+  button_collapse_all: Свернуть все
+  label_additional_workflow_transitions_for_assignee: Дополнительные переходы, когда пользователь является исполнителем
+  label_additional_workflow_transitions_for_author: Дополнительные переходы, когда пользователь является автором
+  label_bulk_edit_selected_time_entries: Массовое изменение выбранных записей затраченного времени
+  text_time_entries_destroy_confirmation: Вы уверены что хотите удалить выбранные записи затраченного времени?
+  label_role_anonymous: Аноним
+  label_role_non_member: Не участник
+  label_issue_note_added: Примечание добавлено
+  label_issue_status_updated: Статус обновлён
+  label_issue_priority_updated: Приоритет обновлён
+  label_issues_visibility_own: Задачи созданные или назначенные пользователю
+  field_issues_visibility: Видимость задач
+  label_issues_visibility_all: Все задачи
+  permission_set_own_issues_private: Установление видимости (общая/частная) для собственных задач
+  field_is_private: Частная
+  permission_set_issues_private: Установление видимости (общая/частная) для задач
+  label_issues_visibility_public: Только общие задачи
+  text_issues_destroy_descendants_confirmation: Так же будет удалено %{count} задач(и).
+  field_commit_logs_encoding: Кодировка комментариев в хранилище
+  field_scm_path_encoding: Кодировка пути
+  text_scm_path_encoding_note: "По умолчанию: UTF-8"
+  field_path_to_repository: Путь к хранилищу
+  field_root_directory: Корневая директория
+  field_cvs_module: Модуль
+  field_cvsroot: CVSROOT
+  text_mercurial_repository_note: Локальное хранилище (например, /hgrepo, c:\hgrepo)
+  text_scm_command: Команда
+  text_scm_command_version: Версия
+  label_git_report_last_commit: Указывать последнее изменения для файлов и директорий
+  text_scm_config: Вы можете настроить команды SCM в файле config/configuration.yml. Пожалуйста, перезапустите приложение после редактирования этого файла.
+  text_scm_command_not_available: Команда системы контроля версий недоступна. Пожалуйста, проверьте настройки в административной панели.
+  notice_issue_successful_create: Задача %{id} создана.
+  label_between: между
+  setting_issue_group_assignment: Разрешить назначение задач группам пользователей
+  label_diff: diff
+  text_git_repository_note: Repository is bare and local (e.g. /gitrepo, c:\gitrepo)
+  description_query_sort_criteria_direction: Sort direction
+  description_project_scope: Search scope
+  description_filter: Filter
+  description_user_mail_notification: Mail notification settings
+  description_date_from: Enter start date
+  description_message_content: Message content
+  description_available_columns: Available Columns
+  description_date_range_interval: Choose range by selecting start and end date
+  description_issue_category_reassign: Choose issue category
+  description_search: Searchfield
+  description_notes: Notes
+  description_date_range_list: Choose range from list
+  description_choose_project: Projects
+  description_date_to: Enter end date
+  description_query_sort_criteria_attribute: Sort attribute
+  description_wiki_subpages_reassign: Choose new parent page
+  description_selected_columns: Selected Columns
+  label_parent_revision: Parent
+  label_child_revision: Child
+  error_scm_annotate_big_text_file: The entry cannot be annotated, as it exceeds the maximum text file size.
+  setting_default_issue_start_date_to_creation_date: Use current date as start date for new issues
+  button_edit_section: Edit this section
+  setting_repositories_encodings: Attachments and repositories encodings
+  description_all_columns: All Columns
+  button_export: Export
+  label_export_options: "%{export_format} export options"
+  error_attachment_too_big: This file cannot be uploaded because it exceeds the maximum allowed file size (%{max_size})
+  notice_failed_to_save_time_entries: "Failed to save %{count} time entrie(s) on %{total} selected: %{ids}."
+  label_x_issues:
+    zero:  0 Задач
+    one:   1 Задача
+    few:   "%{count} Задач"
+    many:  "%{count} Задач"
+    other: "%{count} Задач"
+  label_repository_new: New repository
+  field_repository_is_default: Main repository
+  label_copy_attachments: Copy attachments
+  label_item_position: "%{position}/%{count}"
+  label_completed_versions: Completed versions
+  text_project_identifier_info: Only lower case letters (a-z), numbers, dashes and underscores are allowed.<br />Once saved, the identifier cannot be changed.
+  field_multiple: Multiple values
+  setting_commit_cross_project_ref: Allow issues of all the other projects to be referenced and fixed
+  text_issue_conflict_resolution_add_notes: Add my notes and discard my other changes
+  text_issue_conflict_resolution_overwrite: Apply my changes anyway (previous notes will be kept but some changes may be overwritten)
+  notice_issue_update_conflict: The issue has been updated by an other user while you were editing it.
+  text_issue_conflict_resolution_cancel: Discard all my changes and redisplay %{link}
+  permission_manage_related_issues: Manage related issues
+  field_ldap_filter: LDAP filter
+  label_search_for_watchers: Search for watchers to add
+  notice_account_deleted: "Ваша учетная запись полностью удалена" 
+  setting_unsubscribe: "Разрешить пользователям удалять свои учетные записи" 
+  button_delete_my_account: "Удалить мою учетную запись" 
+  text_account_destroy_confirmation: "Ваша учетная запись будет полностью удалена без возможности восстановления.\nВы уверены, что хотите продолжить?" 

@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: catalogs
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  price      :integer
+#  account    :string(255)
+#  date       :date
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  price: 1
+  account: MyString
+  date: 2012-09-12
+
+two:
+  name: MyString
+  price: 1
+  account: MyString
+  date: 2012-09-12

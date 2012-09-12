@@ -1,4 +1,8 @@
 HomeMoney::Application.routes.draw do
+  resources :catalogs
+
+  get "catalogs/new"
+
   get "redirect/error"
 
   get "pages/home"
@@ -15,7 +19,11 @@ HomeMoney::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
-
+  match '/buy', :to => 'pages#buy'
+  match '/account', :to => 'pages#account'
+  match '/report',    :to => 'pages#report'
+  match '/report',  :to => 'catalogs#new'
+  
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
@@ -59,9 +67,7 @@ HomeMoney::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'pages#home'
-  match '/buy', :to => 'pages#buy'
-  match '/account', :to => 'pages#account'
-  match '/report',    :to => 'pages#report'
+  
    
 
   # See how all your routes lay out with "rake routes"
