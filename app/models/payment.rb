@@ -2,6 +2,7 @@
 	attr_accessible :account, :ballance
 	
 		validates :account, :presence => true,
-							:length => { :maximum => 10 }
+							:length => { :maximum => 10 },
+							:uniqueness => true
 					
 end

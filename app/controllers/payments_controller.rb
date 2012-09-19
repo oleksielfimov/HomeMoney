@@ -5,10 +5,12 @@
 	def destroy
 		@payment = Payment.find(params[:id])
 		@payment.destroy
-		
+		sleep 1
+
 		redirect_to :action => :index
 	end
 	def create
+		
 		@payment = Payment.new(params[:payment])
 		if @payment.save
 		redirect_to :action => :show, :id => @payment.id
