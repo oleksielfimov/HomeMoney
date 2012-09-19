@@ -1,5 +1,5 @@
 ﻿class PagesController < ApplicationController
-   
+  
   def buy
 	@title='Покупка'
   end
@@ -14,7 +14,7 @@
   
   def home
    @title='Копилка'
-  end
+  end	
   
-end
+ end
 

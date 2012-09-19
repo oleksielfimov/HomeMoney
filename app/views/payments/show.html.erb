@@ -1,0 +1,16 @@
+﻿<h1>Готово</h1>
+
+<p>
+  <strong>Account:</strong>
+   <%= @payment.account %>
+</p>
+ 
+<p>
+  <strong>Ballance:</strong>
+  <%= @payment.ballance %>
+</p>
+
+<%= link_to 'Изменить', :action => :edit, :id => @payment.id %>
+<%= link_to 'Назад', :action => :new %>
+<%= link_to 'Просмотреть созданные счета', :action => :index %>
+<%= link_to 'Удалить', { :action => :destroy, :id => @payment.id }, :method => :delete, :confirm => 'Честно?' %>

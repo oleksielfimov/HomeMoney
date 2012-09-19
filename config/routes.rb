@@ -1,32 +1,26 @@
-HomeMoney::Application.routes.draw do
-  get "calendars/show"
-
-  resources :catalogs
-
-  get "catalogs/new"
-
-  get "redirect/error"
+﻿HomeMoney::Application.routes.draw do
+  resources :payments
 
   get "pages/home"
-
-  get "pages/buy"
 
   get "pages/account"
 
   get "pages/report"
-  
+    
   get "pages/show"
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
-  match '/buy', :to => 'pages#buy'
-  match '/account', :to => 'pages#account'
+
+  match '/account', :to => 'payments#new'
   match '/report',    :to => 'pages#report'
-  match '/report',  :to => 'catalogs#new'
+  
+     
+  
   
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
