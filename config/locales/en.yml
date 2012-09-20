@@ -1,4 +1,4 @@
-en:
+﻿en:
   # Text direction: Left-to-Right (ltr) or Right-to-Left (rtl)
   direction: ltr
   date:
@@ -108,12 +108,12 @@ en:
         confirmation: "doesn't match confirmation"
         accepted: "must be accepted"
         empty: "can't be empty"
-        blank: "can't be blank"
+        blank: "должен быть заполнен"
         too_long: "is too long (maximum is %{count} characters)"
         too_short: "is too short (minimum is %{count} characters)"
         wrong_length: "is the wrong length (should be %{count} characters)"
         taken: "has already been taken"
-        not_a_number: "is not a number"
+        not_a_number: "не является числом"
         not_a_date: "is not a valid date"
         greater_than: "must be greater than %{count}"
         greater_than_or_equal_to: "must be greater than or equal to %{count}"

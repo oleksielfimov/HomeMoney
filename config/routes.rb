@@ -16,7 +16,7 @@
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
-  match '/account', :to => 'payments#new'
+  match '/account', :to => 'payments#index'
   match '/report',    :to => 'pages#report'
   
      
