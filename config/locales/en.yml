@@ -849,14 +849,14 @@
   label_search_for_watchers: Search for watchers to add
 
   button_login: Login
-  button_submit: Submit
+  button_submit: Подвердить
   button_save: Save
   button_check_all: Check all
   button_uncheck_all: Uncheck all
   button_collapse_all: Collapse all
   button_expand_all: Expand all
-  button_delete: Delete
-  button_create: Create
+  button_delete: Удалить
+  button_create: Создать
   button_create_and_continue: Create and continue
   button_test: Test
   button_edit: Edit
@@ -889,7 +889,7 @@
   button_copy: Copy
   button_copy_and_follow: Copy and follow
   button_annotate: Annotate
-  button_update: Update
+  button_update: Обновить
   button_configure: Configure
   button_quote: Quote
   button_duplicate: Duplicate

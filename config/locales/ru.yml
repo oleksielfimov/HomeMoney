@@ -154,7 +154,7 @@ ru:
       minute: "Минут"
       second: "Секунд"
 
-  activerecord:
+  activerecord:	
     errors:
       template:
         header:

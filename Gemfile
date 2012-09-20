@@ -11,6 +11,7 @@ gem 'rails_admin'
 gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'russian'
 
 
 

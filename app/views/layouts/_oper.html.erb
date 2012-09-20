@@ -1,0 +1,36 @@
+﻿<%= form_for @operation do |f| %>
+<% if @operation.errors.any? %>
+		<div id = 'errorExplanation'> 
+			<p><%= pluralize(@operation.errors.count, "error") %>... ups </p>
+			<ul>
+				<% @operation.errors.full_messages.each do |msg| %>
+				<li><%= msg%></li>
+				<% end%>
+			</ul>
+		</div>
+	<% end %>
+  <p>
+    <%= f.label :Описание %>
+    <%= f.text_field :mark %>
+  </p>
+  <p class="field">
+    <%= f.label :Сумма %>
+    <%= f.text_field :amount %>
+  </p>
+  <p class="field">
+    <%= f.label :Вид_платежа %>
+    <%= f.text_field :purpose %>
+  </p>
+   <p class="field">
+    <%= f.label :Счет %>
+    <%= f.text_field :acct %>
+  </p>
+  <p class="field">
+    <%= f.label :Дата %><br />
+    <%= f.text_field :date %>
+  </p>
+  <p class="actions">
+    <%= f.submit "Готово" %>
+  </p>
+<% end %>
+ 

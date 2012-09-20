@@ -1,13 +1,7 @@
 ﻿HomeMoney::Application.routes.draw do
   resources :payments
-
-  get "pages/home"
-
-  get "pages/account"
-
-  get "pages/report"
-    
-  get "pages/show"
+  resources :operations	
+  resources :pages
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -18,6 +12,7 @@
 
   match '/account', :to => 'payments#index'
   match '/report',    :to => 'pages#report'
+  match '/catalog', :to => 'operations#index'
   
      
   
