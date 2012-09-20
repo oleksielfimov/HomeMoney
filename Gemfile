@@ -17,6 +17,7 @@ gem 'russian'
 
 group :development do
 gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
+gem 'sqlite3'
 end
 
 group :test do
