@@ -19,11 +19,11 @@
   </p>
   <p class="field">
     <%= f.label :Вид_платежа %>
-    <%= f.text_field :purpose %>
+	<%= f.select(:purpose, @purpose_lookup) %>
   </p>
    <p class="field">
-    <%= f.label :Счет %>
-    <%= f.text_field :acct %>
+    <%= f.label :acct, "Счет" %>
+    <%= f.select :acct, Payment.find(:all, :order => "account").collect {|u| [u.account]}, :multiple => true, :size => 5  %>
   </p>
   <p class="field">
     <%= f.label :Дата %><br />

@@ -1,2 +1,3 @@
-module OperationsHelper
+﻿module OperationsHelper
+
 end
