@@ -4,9 +4,9 @@
 	end
 	def destroy
 		@payment = Payment.find(params[:id])
-		@payment.destroy
+		@payment.delete
 		sleep 1
-
+		
 		redirect_to :action => :index
 	end
 	def create

@@ -2,11 +2,11 @@
 	def new
 	  @operation = Operation.new
 	  @purpose_lookup = ['Доход', 'Расход']
-	end
+	  end
 	def destroy
 
 		@operation = Operation.find(params[:id])
-		@operation.destroy
+		@operation.delete
 		sleep 1
 
 		redirect_to :action => :index
@@ -15,6 +15,7 @@
 		@purpose_lookup = ['Доход', 'Расход']
 		@operation = Operation.new(params[:operation])
 		if @operation.save
+		
 		redirect_to :action => :show, :id => @operation.id
 			else
 		render 'new'
