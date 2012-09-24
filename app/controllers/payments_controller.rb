@@ -4,8 +4,7 @@
 	end
 	def destroy
 		@payment = Payment.find(params[:id])
-		@payment.delete
-		sleep 1
+		@payment.destroy
 		
 		redirect_to :action => :index
 	end
@@ -35,5 +34,5 @@
 		render 'edit'
 			end
 	end
-			
+
 end

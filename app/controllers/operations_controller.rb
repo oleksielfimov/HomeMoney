@@ -1,18 +1,14 @@
 ﻿class OperationsController < ApplicationController
 	def new
 	  @operation = Operation.new
-	  @purpose_lookup = ['Доход', 'Расход']
+	  @purpose_lookup = ['+', '-']
 	  end
 	def destroy
-
 		@operation = Operation.find(params[:id])
-		@operation.delete
-		sleep 1
-
+		@operation.destroy
 		redirect_to :action => :index
 	end
 	def create
-		@purpose_lookup = ['Доход', 'Расход']
 		@operation = Operation.new(params[:operation])
 		if @operation.save
 		
@@ -22,7 +18,7 @@
 			end
 	end	
 	def show
-		@purpose_lookup = ['Доход', 'Расход']
+		@purpose_lookup = ['+', '-']
 		@operation = Operation.find(params[:id])
 	end
 	def index
@@ -30,11 +26,11 @@
 		@operations = Operation.all
 	end
 	def edit
-		@purpose_lookup = ['Доход', 'Расход']
+		@purpose_lookup = ['+', '-']
 		@operation = Operation.find(params[:id])
 	end
 	def update
-		@purpose_lookup = ['Доход', 'Расход']
+		@purpose_lookup = ['+', '-']
 		@operation = Operation.find(params[:id])
 			if @operation.update_attributes(params[:operation])
 		redirect_to :action => :show, :id => @operation.id
@@ -42,5 +38,5 @@
 		render 'edit'
 			end
 	end
-
+		
 end
