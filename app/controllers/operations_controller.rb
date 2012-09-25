@@ -32,7 +32,7 @@
 	def update
 		@purpose_lookup = ['+', '-']
 		@operation = Operation.find(params[:id])
-			if @operation.update_attributes(params[:operation])
+			if @operation.update_attributes(params[:operation]) 
 		redirect_to :action => :show, :id => @operation.id
 			else
 		render 'edit'

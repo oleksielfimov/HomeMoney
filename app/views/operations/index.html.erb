@@ -2,9 +2,9 @@
 <%= button_to 'Добавить запись', { :action => :new }, :method => :get %>
 <table>
 	<tr>
-		<th>Описание</th>
-		<th>Сумма</th>
 		<th>Вид платежа</th>
+		<th>Сумма</th>
+		<th>Доход/Расход</th>
 		<th>Счет</th>
 		<th>Дата</th>
 	</tr>	
@@ -15,7 +15,6 @@
 		<td><%= operation.purpose %></td>
 		<td><%= operation.acct %></td>
 		<td><%= operation.date %></td>
-		<td><%= button_to 'Изменить', { :action => :edit, :id => operation.id }, :method => :get  %></td>
 		<td><%= button_to 'Удалить', { :action => :destroy, :id => operation.id }, :method => :delete, :confirm => 'Честно?' %></td>
 	</tr>
 	<% end %>

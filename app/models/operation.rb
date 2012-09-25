@@ -1,5 +1,5 @@
 ﻿class Operation < ActiveRecord::Base
-
+attr_accessible :acct, :mark, :purpose, :date, :amount
 
 DATE_FORMATS = [
 	'%Y-%m-%d',
@@ -10,10 +10,15 @@ DATE_FORMATS = [
 	'%d %b %Y',
 	'%d %B %Y',
 	'%b %d, %Y',
-	'%B %d, %Y'
+	'%B %d, %Y',
+	'%B, %d, %Y'
     ]
 	after_save :find_acc
 	before_destroy :find_acc_des
+	before_update :find_acc_del
+	
+	
+
 
 	def find_acc
 	acc_oper_ver = Operation.find(:last) #можно так 
@@ -45,6 +50,22 @@ end
 	end
 	end
 	
-	attr_accessible :acct, :mark, :purpose, :date, :amount
+	
 				
 end
+	
+	def find_acc_del
+	acc_oper_ver = Operation.find_by_id("#{id}")
+	acc_paym_ver = Payment.find_by_account("#{acc_oper_ver.acct}")
+	a, b = Payment.find_by_account("#{acc_oper_ver.acct}").ballance, acc_oper_ver.amount
+	if acc_oper_ver.purpose == '+'
+	c = a.to_f - b.to_f
+	Payment.where(:account => acc_oper_ver.acct).update_all(:ballance => c)
+	else
+	d = a.to_f + b.to_f
+	Payment.where(:account => acc_oper_ver.acct).update_all(:ballance => d)
+	end
+	end
+	
+	
+	
