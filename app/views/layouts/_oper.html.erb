@@ -1,39 +1,40 @@
 ﻿<%= javascript_include_tag "calendar_date_select/prototype.js" %>
 <%= javascript_include_tag "calendar_date_select/calendar_date_select.js" %>
+<%= calendar_date_select_includes :style => 'silver' %>
 <%= form_for @operation do |f| %>
 	<% if @operation.errors.any? %>
 		<div id = 'errorExplanation'> 
-			<p><%= pluralize(@operation.errors.count, "error") %>... ups </p>
-			<ul>
-				<% @operation.errors.full_messages.each do |msg| %>
-				<li><%= msg%></li>
-				<% end%>
-			</ul>
+			
 		</div>
 	<% end %>
-  <p>
-    <%= f.label :Mark %>
+  <table class="field_1">
+    <%= f.label :Mark %></br>
     <%= f.text_field :mark %>
-  </p>
-  <p class="field">
-    <%= f.label :Amount %>
-    <%= f.text_field :amount %>
-  </p>
-  <p class="field">
-    <%= f.label :"_income/expanse" %>
+  </table>
+  <table class="field_1">
+    <%= f.label :Amount %></br>
+    <%= f.text_field :amount, :size => 15 %>
+  </table>
+  <table class="field_1">
+    <%= f.label :"_income/expanse" %></br>
 	<%= f.select(:purpose, @purpose_lookup) %>
-  </p>
-   <p class="field">
-    <%= f.label :acct, "Account" %>
-    <%= f.select :acct, Payment.find(:all, :order => "account").collect {|u| [u.account]}, :multiple => true, :size => 5  %>
-  </p>
-  <p class="field">
-    <%= f.label :Date %><br />
-    <%= f.calendar_date_select :date %>
-  </p>
-  <p class="actions">
+  </table>
+   <table class="field_1">
+    <%= f.label :acct, "Account" %></br>
+    <%= f.select :acct, Payment.find(:all, :order => "account").collect {|u| [u.account]}, :multiple => true, :size => 10  %>
+  </table>
+  <table class="field_1">
+    <%= f.label :Date %></br>
+    <%= f.calendar_date_select :date, :size => 17  %>
+  </>
+  <table class="actions">
     <%= f.submit "Apply" %>
-  </p>
+  </table>
 <% end %>
+	<ul>
+	<% @operation.errors.full_messages.each do |msg| %>
+	<li><%= msg%></li>
+	<% end%>
+	</ul>
 
  

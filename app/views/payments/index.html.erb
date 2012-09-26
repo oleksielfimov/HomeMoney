@@ -1,6 +1,5 @@
-﻿<h1>Все</h1>
-<%= button_to 'Add account', { :action => :new }, :method => :get %>
-<table>
+﻿<p1><%= button_to 'Add account', { :action => :new }, :method => :get %></p1>
+<table class="field_1">
 	<tr>
 		<th>Account</th></br>
 		<th>Ballance</th></br>
@@ -9,7 +8,8 @@
 	<tr>
 		<td><%= payment.account %></td>
 		<td><%= payment.ballance %></td>
-		<td><%= button_to 'Delete', { :action => :destroy, :id => payment.id }, :method => :delete, :confirm => 'Честно?' %></td>
+		<th><%= button_to 'Delete', { :action => :destroy, :id => payment.id }, :method => :delete, :confirm => 'Are you sure?' %></th>
 	</tr>
 	<% end %>
 </table>
+

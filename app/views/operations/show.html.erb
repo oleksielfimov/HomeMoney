@@ -1,4 +1,4 @@
-﻿<h1>Готово</h1>
+﻿<h1>Done</h1>
 
 <p>
   <strong>Mark:</strong>
@@ -6,7 +6,7 @@
 </p>
 <p>
   <strong>Amount:</strong>
-   <%= @operation.amount %>
+   <%= @operation.amount.to_f.round(2) %>
 </p>
 <p>
   <strong>Income/Expanse:</strong>

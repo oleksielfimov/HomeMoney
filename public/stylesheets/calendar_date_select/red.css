@@ -62,7 +62,7 @@ iframe.ie6_blocker {
 }
 
 .calendar_date_select .cds_header a.prev {
-  float:left;
+  float:right;
 }
 .calendar_date_select .cds_header a.next {
   float:right;
