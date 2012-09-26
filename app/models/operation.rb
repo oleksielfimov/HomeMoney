@@ -1,6 +1,13 @@
 ﻿class Operation < ActiveRecord::Base
 attr_accessible :acct, :mark, :purpose, :date, :amount
 
+	validates :mark,		:presence => true,
+							:length => { :minimum => 3 }
+
+	validates :amount,		:format => { :with => /^\d+??(?:\.\d{0,2})?$/ },
+							:presence => true
+														
+
 DATE_FORMATS = [
 	'%Y-%m-%d',
 	'%d/%m/%Y',

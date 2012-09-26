@@ -1,16 +1,15 @@
 ﻿<h1>Все</h1>
-<%= button_to 'Добавить счет', { :action => :new }, :method => :get %>
+<%= button_to 'Add account', { :action => :new }, :method => :get %>
 <table>
 	<tr>
-		<th>Счет</th></br>
-		<th>Текущий баланс</th></br>
+		<th>Account</th></br>
+		<th>Ballance</th></br>
 	</tr>	
 			<% @payments.each do |payment| %>
 	<tr>
 		<td><%= payment.account %></td>
 		<td><%= payment.ballance %></td>
-		<td><%= button_to 'Изменить', { :action => :edit, :id => payment.id }, :method => :get  %></td>
-		<td><%= button_to 'Удалить', { :action => :destroy, :id => payment.id }, :method => :delete, :confirm => 'Честно?' %></td>
+		<td><%= button_to 'Delete', { :action => :destroy, :id => payment.id }, :method => :delete, :confirm => 'Честно?' %></td>
 	</tr>
 	<% end %>
 </table>

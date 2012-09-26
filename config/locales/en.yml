@@ -1,4 +1,4 @@
-﻿en:
+en:
   # Text direction: Left-to-Right (ltr) or Right-to-Left (rtl)
   direction: ltr
   date:
@@ -108,12 +108,12 @@
         confirmation: "doesn't match confirmation"
         accepted: "must be accepted"
         empty: "can't be empty"
-        blank: "должен быть заполнен"
+        blank: "can't be blank"
         too_long: "is too long (maximum is %{count} characters)"
         too_short: "is too short (minimum is %{count} characters)"
         wrong_length: "is the wrong length (should be %{count} characters)"
         taken: "has already been taken"
-        not_a_number: "не является числом"
+        not_a_number: "is not a number"
         not_a_date: "is not a valid date"
         greater_than: "must be greater than %{count}"
         greater_than_or_equal_to: "must be greater than or equal to %{count}"
@@ -849,14 +849,14 @@
   label_search_for_watchers: Search for watchers to add
 
   button_login: Login
-  button_submit: Подвердить
+  button_submit: Submit
   button_save: Save
   button_check_all: Check all
   button_uncheck_all: Uncheck all
   button_collapse_all: Collapse all
   button_expand_all: Expand all
-  button_delete: Удалить
-  button_create: Создать
+  button_delete: Delete
+  button_create: Create
   button_create_and_continue: Create and continue
   button_test: Test
   button_edit: Edit
@@ -889,7 +889,7 @@
   button_copy: Copy
   button_copy_and_follow: Copy and follow
   button_annotate: Annotate
-  button_update: Обновить
+  button_update: Update
   button_configure: Configure
   button_quote: Quote
   button_duplicate: Duplicate

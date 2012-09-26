@@ -12,7 +12,7 @@ gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'russian'
-
+gem 'calendar_date_select', :git => 'git://github.com/paneq/calendar_date_select.git'
 
 
 group :development do

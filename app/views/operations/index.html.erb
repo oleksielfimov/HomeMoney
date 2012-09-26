@@ -1,12 +1,12 @@
 ﻿<h1>Hello</h1>
-<%= button_to 'Добавить запись', { :action => :new }, :method => :get %>
+<%= button_to 'Add new record', { :action => :new }, :method => :get %>
 <table>
 	<tr>
-		<th>Вид платежа</th>
-		<th>Сумма</th>
-		<th>Доход/Расход</th>
-		<th>Счет</th>
-		<th>Дата</th>
+		<th>Type of payment</th>
+		<th>Amount</th>
+		<th>Income/Expanse</th>
+		<th>Account</th>
+		<th>Date</th>
 	</tr>	
 			<% @operations.each do |operation| %>
 	<tr>
@@ -15,7 +15,7 @@
 		<td><%= operation.purpose %></td>
 		<td><%= operation.acct %></td>
 		<td><%= operation.date %></td>
-		<td><%= button_to 'Удалить', { :action => :destroy, :id => operation.id }, :method => :delete, :confirm => 'Честно?' %></td>
+		<td><%= button_to 'Delete', { :action => :destroy, :id => operation.id }, :method => :delete, :confirm => 'Честно?' %></td>
 	</tr>
 	<% end %>
 </table>

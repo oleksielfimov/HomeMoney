@@ -1,4 +1,4 @@
-# Russian localization for Ruby on Rails 2.2+
+﻿# Russian localization for Ruby on Rails 2.2+
 # by Yaroslav Markin <yaroslav@markin.net>
 #
 # Be sure to check out "russian" gem (http://github.com/yaroslav/russian) for
@@ -165,7 +165,7 @@ ru:
 
         body: "Проблемы возникли со следующими полями:"
 
-      messages:
+    messages:
         inclusion: "имеет непредусмотренное значение"
         exclusion: "имеет зарезервированное значение"
         invalid: "имеет неверное значение"

@@ -1,27 +1,26 @@
 ﻿<h1>Готово</h1>
 
 <p>
-  <strong>Описание:</strong>
+  <strong>Mark:</strong>
    <%= @operation.mark %>
 </p>
 <p>
-  <strong>Сумма:</strong>
+  <strong>Amount:</strong>
    <%= @operation.amount %>
 </p>
 <p>
-  <strong>Вид платежа:</strong>
+  <strong>Income/Expanse:</strong>
    <%= @operation.purpose %>
 </p>
 <p>
-  <strong>Счет:</strong>
+  <strong>Account:</strong>
    <%= @operation.acct %>
 </p> 
 <p>
-  <strong>Дата:</strong>
+  <strong>Date:</strong>
   <%= @operation.date %>
 </p>
 
-<%= button_to 'Изменить', { :action => :edit, :id => @operation.id }, :method => :get %>
-<%= button_to 'Назад', { :action => :new }, :method => :get %>
-<%= button_to 'Просмотреть все записи', { :action => :index }, :method => :get %>
-<%= button_to 'Удалить', { :action => :destroy, :id => @operation.id }, :method => :delete, :confirm => 'Честно?' %>
+
+<%= button_to 'View all records', { :action => :index }, :method => :get %>
+<%= button_to 'Delete', { :action => :destroy, :id => @operation.id }, :method => :delete, :confirm => 'Честно?' %>

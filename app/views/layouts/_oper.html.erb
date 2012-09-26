@@ -1,5 +1,7 @@
-﻿<%= form_for @operation do |f| %>
-<% if @operation.errors.any? %>
+﻿<%= javascript_include_tag "calendar_date_select/prototype.js" %>
+<%= javascript_include_tag "calendar_date_select/calendar_date_select.js" %>
+<%= form_for @operation do |f| %>
+	<% if @operation.errors.any? %>
 		<div id = 'errorExplanation'> 
 			<p><%= pluralize(@operation.errors.count, "error") %>... ups </p>
 			<ul>
@@ -10,27 +12,28 @@
 		</div>
 	<% end %>
   <p>
-    <%= f.label :Вид_платежа %>
+    <%= f.label :Mark %>
     <%= f.text_field :mark %>
   </p>
   <p class="field">
-    <%= f.label :Сумма %>
+    <%= f.label :Amount %>
     <%= f.text_field :amount %>
   </p>
   <p class="field">
-    <%= f.label :'Доход/Расход' %>
+    <%= f.label :"_income/expanse" %>
 	<%= f.select(:purpose, @purpose_lookup) %>
   </p>
    <p class="field">
-    <%= f.label :acct, "Счет" %>
+    <%= f.label :acct, "Account" %>
     <%= f.select :acct, Payment.find(:all, :order => "account").collect {|u| [u.account]}, :multiple => true, :size => 5  %>
   </p>
   <p class="field">
-    <%= f.label :Дата %><br />
-    <%= f.text_field :date %>
+    <%= f.label :Date %><br />
+    <%= f.calendar_date_select :date %>
   </p>
   <p class="actions">
-    <%= f.submit "Готово" %>
+    <%= f.submit "Apply" %>
   </p>
 <% end %>
+
  
