@@ -9,7 +9,11 @@
 	<% end %>
   <table class="field_1">
     <%= f.label :Mark %></br>
-    <%= f.text_field :mark %>
+    <%= f.text_field :mark, :onclick => 'this.select()' %>
+  </table>
+   <table class="field_1">
+    <%= f.label :Conractor %></br>
+    <%= f.text_field :contractor, :onclick => 'this.select()' %>
   </table>
   <table class="field_1">
     <%= f.label :Amount %></br>

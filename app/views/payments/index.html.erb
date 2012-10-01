@@ -1,11 +1,13 @@
 ﻿<p1><%= button_to 'Add account', { :action => :new }, :method => :get %></p1>
 <table class="field_1">
 	<tr>
+		<th></th>
 		<th>Account</th></br>
 		<th>Ballance</th></br>
 	</tr>	
 			<% @payments.each do |payment| %>
 	<tr>
+		<th><%= button_to 'Transfer', { :action => :trans }, :method => :get %></th>
 		<td><%= payment.account %></td>
 		<td><%= payment.ballance %></td>
 		<th><%= button_to 'Delete', { :action => :destroy, :id => payment.id }, :method => :delete, :confirm => 'Are you sure?' %></th>

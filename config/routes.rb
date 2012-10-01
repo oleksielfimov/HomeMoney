@@ -13,7 +13,7 @@
   match '/account', :to => 'payments#index'
   match '/report',    :to => 'pages#report'
   match '/catalog', :to => 'operations#index'
-  
+  match '/transfer', :to => 'payments#trans'
      
   
   

@@ -1,8 +1,10 @@
 ﻿class Operation < ActiveRecord::Base
-attr_accessible :acct, :mark, :purpose, :date, :amount
+attr_accessible :acct, :mark, :purpose, :date, :amount, :contractor
 
 	validates :mark,		:presence => true,
 							:length => { :minimum => 3 }
+    validates :contractor,	:presence => true,
+							:length => { :minimum => 3 }								
 
 	validates :amount,		:format => { :with => /^\d+??(?:\.\d{0,2})?$/ },
 							:presence => true

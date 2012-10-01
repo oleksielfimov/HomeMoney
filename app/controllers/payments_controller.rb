@@ -34,5 +34,7 @@
 		render 'edit'
 			end
 	end
+	def trans
+	end
 
 end

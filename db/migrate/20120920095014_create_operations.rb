@@ -6,7 +6,7 @@ class CreateOperations < ActiveRecord::Migration
       t.string :purpose
       t.string :acct
       t.date :date
-
+	  	  
       t.timestamps
     end
   end	
