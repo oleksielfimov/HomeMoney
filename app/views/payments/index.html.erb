@@ -1,17 +1,25 @@
-﻿<p1><%= button_to 'Add account', { :action => :new }, :method => :get %></p1>
+﻿<p1>
+<%= button_to 'Add account', { :action => :new }, :method => :get %>
+<%= button_to 'Transfer', { :action => :trans }, :method => :patch  %>
+</p1>
+
 <table class="field_1">
 	<tr>
-		<th></th>
+	<th class="field_2">
+		Transfer
+		</th>
 		<th>Account</th></br>
 		<th>Ballance</th></br>
 	</tr>	
 			<% @payments.each do |payment| %>
 	<tr>
-		<th><%= button_to 'Transfer', { :action => :trans }, :method => :get %></th>
+		<td class="field_2">
+		<input type="radio" name="check1" value="payment.id" >
+		</td>
 		<td><%= payment.account %></td>
 		<td><%= payment.ballance %></td>
 		<th><%= button_to 'Delete', { :action => :destroy, :id => payment.id }, :method => :delete, :confirm => 'Are you sure?' %></th>
 	</tr>
 	<% end %>
-</table>
+</table></br></br>
 

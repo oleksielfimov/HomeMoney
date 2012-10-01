@@ -2,7 +2,7 @@
   resources :payments
   resources :operations	
   resources :pages
-  
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -14,7 +14,10 @@
   match '/report',    :to => 'pages#report'
   match '/catalog', :to => 'operations#index'
   match '/transfer', :to => 'payments#trans'
-     
+  match 'search', :to=> 'operations#search'
+  post '/transfer' do
+  @acc_from = Payment.find(params[:check1])
+  end 
   
   
   # Sample of named route:

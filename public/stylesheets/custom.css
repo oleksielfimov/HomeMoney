@@ -62,6 +62,7 @@ p {
   font-size: 120%;
   padding: 20px;
   background: #fff;
+  text-align: center;
 }
 p1 {
   font-size: 120%;
@@ -144,4 +145,7 @@ color: green;
 	text-align: center;
 
 }
-
+.field_2 {
+	height: 10px;
+	width: 5%;
+}

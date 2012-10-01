@@ -1,1 +1,33 @@
-<h1>Please, select</h1>
+<p>Transfer from</p>
+<table class="field_1">
+	<tr>
+		<th>Account</th></br>
+		<th>Ballance</th></br>
+	</tr>	
+
+	<tr>
+		<td><%= @acc_from.account %></td>
+		<td><%= @acc_from.ballance %></td>
+		</tr>
+
+</table></br></br></br></br>
+<table class="field_1">
+	<th class="field_2">
+		to
+		</th>
+	<tr>
+		
+		<% Payment.find(:all).each do |payment| %>
+		
+		<td class="field_2">
+		<input type="radio" name="check2">
+		</td>
+		<td><%= payment.account %></td>
+		<td><%= payment.ballance %></td>
+		
+	</tr>
+	<% end %>
+</table>
+
+
+

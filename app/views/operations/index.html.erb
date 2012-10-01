@@ -1,4 +1,9 @@
-﻿<h1>All records <%= button_to 'Add new record', { :action => :new }, :method => :get %></h1>
+﻿<%= button_to 'Add new record', { :action => :new }, :method => :get %></br>
+<%= form_tag({:controller => "operations", :action => "search"}, :method => "get") %>
+ <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %></br></br>
+
 <table class="field">
 	<tr>
 		<th>Mark</th>
@@ -20,3 +25,5 @@
 	</tr>
 	<% end %>
 </table></br>
+
+

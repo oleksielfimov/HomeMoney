@@ -22,6 +22,8 @@
 	end
 	def index
 		@payments = Payment.all
+	
+		
 	end
 	def edit
 		@payment = Payment.find(params[:id])
@@ -35,6 +37,9 @@
 			end
 	end
 	def trans
+		@acc_from = Payment.find(params[:check1])
+		@acc_to = params[:check2]
+		
 	end
 
 end
