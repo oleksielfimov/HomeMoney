@@ -4,12 +4,12 @@
 		<th>Account</th></br>
 		<th>Ballance</th></br>
 	</tr>	
-
+		<% Payment.find(:all).each do |payment| %>
 	<tr>
-		<td><%= @acc_from.account %></td>
-		<td><%= @acc_from.ballance %></td>
+		<td><%= payment.account %></td>
+		<td><%= payment.ballance %></td>
 		</tr>
-
+	<% end %>
 </table></br></br></br></br>
 <table class="field_1">
 	<th class="field_2">

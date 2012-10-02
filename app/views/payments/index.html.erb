@@ -5,8 +5,9 @@
 
 <table class="field_1">
 	<tr>
-	<th class="field_2">
-		Transfer
+		
+		<th class="field_2">
+			
 		</th>
 		<th>Account</th></br>
 		<th>Ballance</th></br>
@@ -14,8 +15,14 @@
 			<% @payments.each do |payment| %>
 	<tr>
 		<td class="field_2">
-		<input type="radio" name="check1" value="payment.id" >
-		</td>
+		<%= form_for payment do |f| %>     
+		<%= f.radio_button :account, payment.account%></br>
+		<%= f.label :account, "", :value => "payment.account" %>
+		<%= f.label :payment do %>
+		<%= f.radio_button :account, "payment" %>
+		<%= f.submit "Transfer" %>
+		<% end %>
+		<% end %>
 		<td><%= payment.account %></td>
 		<td><%= payment.ballance %></td>
 		<th><%= button_to 'Delete', { :action => :destroy, :id => payment.id }, :method => :delete, :confirm => 'Are you sure?' %></th>
